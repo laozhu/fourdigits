@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}找不到页面{% endblock %}
+{% block content %}
+<div id="header">
+    <h1>找不到页面</h1>
+    <p><code>404, Page Not Found</code></p>
+    <p>
+        <a class="pure-button" href="{{ url_for('home') }}">返回首页</a>
+    </p>
+</div>
+<div id="content">
+    <img class="pure-img-responsive" src="{{ url_for('static', filename='img/qrcode.png') }}" width="100%" alt="QR Code" />
+</div>
+<div id="footer">
+    <p>Bulls and Cows <3 Wechat</p>
+    <p><a href="http://laozhu.me">Author</a> ~ <a href="https://github.com/laozhu/fourdigits">GitHub</a></p>
+</div>
+{% endblock %}

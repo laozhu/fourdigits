@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}微信猜数字{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="author" content="Ritchie Zhu">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pure-min.css') }}" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grids-responsive-old-ie-min.css') }}" />
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/grids-responsive-min.css') }}" />
+    <!--<![endif]-->
+    <style>
+        #main {
+            max-width: 768px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        em {
+            font-size: 0.8em;
+            color: #777;
+        }
+        #header {
+            padding: 1em;
+            border-bottom: 1px solid #eee;
+        }
+        #header h1 {
+            color: #1f8dd6;
+            font-weight: 500;
+        }
+        #header p {
+            color: #666;
+        }
+        #content {
+            padding: 0.5em;
+            text-align: left;
+        }
+        #content h2 {
+            margin: 1em 0;
+            font-weight: 400;
+            color: #777;
+        }
+        #footer {
+            font-size: 0.8em;
+            line-height: 1.6;
+            border-top: 1px solid #eee;
+            padding: 0.5em;
+        }
+        #footer a, #footer a:hover {
+            color: #3b8bba;
+            text-decoration: none;
+        }
+        #footer a:visited {
+            color: #265778;
+        }
+    </style>
+</head>
+<body><div id="main">
+    {% block content %}{% endblock %}
+</div></body>
+</html>

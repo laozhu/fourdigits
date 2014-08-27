@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}微信猜数字{% endblock %}
+{% block content %}
+<div id="header">
+    <h1>微信猜数字</h1>
+    <p>系统随机生成四个不重复的数字，用户根据系统给出的提示猜对数字即胜出。</p>
+    <p>
+        <a class="pure-button pure-button-primary" href="{{ url_for('help') }}">游戏帮助</a>
+    </p>
+</div>
+<div id="content">
+    <img class="pure-img-responsive" src="{{ url_for('static', filename='img/qrcode.png') }}" width="100%" alt="QR Code" />
+</div>
+<div id="footer">
+    <p>Bulls and Cows <3 Wechat</p>
+    <p><a href="http://laozhu.me">Author</a> ~ <a href="https://github.com/laozhu/fourdigits">GitHub</a></p>
+</div>
+{% endblock %}

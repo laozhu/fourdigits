@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}服务器内部错误{% endblock %}
+{% block content %}
+<div id="header">
+    <h1>服务器内部错误</h1>
+    <p><code>500, Internal Server Error</code></p>
+    <p>
+        <a class="pure-button" href="{{ url_for('home') }}">返回首页</a>
+    </p>
+</div>
+<div id="content">
+    <img class="pure-img-responsive" src="{{ url_for('static', filename='img/qrcode.png') }}" width="100%" alt="QR Code" />
+</div>
+<div id="footer">
+    <p>Bulls and Cows <3 Wechat</p>
+    <p><a href="http://laozhu.me">Author</a> ~ <a href="https://github.com/laozhu/fourdigits">GitHub</a></p>
+</div>
+{% endblock %}

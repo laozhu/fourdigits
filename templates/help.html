@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}微信猜数字{% endblock %}
+{% block content %}
+<div id="header">
+    <h1>游戏帮助</h1>
+    <p>
+        <a class="pure-button" href="{{ url_for('home') }}">返回首页</a>
+    </p>
+</div>
+<div id="content">
+    <h2>#! 命令列表</h2>
+    <ul>
+        <li>帮助<code>(h) -> </code>查看游戏帮助</li>
+        <li>重来<code>(r) -> </code>放弃本局，重新开始</li>
+        <li>提示<code>(t) -> </code>查看本局提示信息</li>
+        <li>数据<code>(d) -> </code>查看个人数据</li>
+    </ul>
+    <p><em>PS: 括号中的字母为该命令对应的快捷指令</em></p>
+    <h2>#! 注意事项</h2>
+    <ul>
+        <li>取消关注后个人数据将被清空</li>
+        <li>发送重来命令将导致败场数增加</li>
+    </ul>
+</div>
+<div id="footer">
+    <p>Bulls and Cows <3 Wechat</p>
+    <p><a href="http://laozhu.me">Author</a> ~ <a href="https://github.com/laozhu/fourdigits">GitHub</a></p>
+</div>
+{% endblock %}
