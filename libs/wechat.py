@@ -58,7 +58,7 @@ class WechatCallbackApi(object):
         if not command:
             return msg['MsgType'] == 'text'
         else:
-            return msg['MsgType'] == 'text' and msg['Content'].strip() == command
+            return msg['MsgType'] == 'text' and msg['Content'].strip().lower() == command
 
     # 是否合法请求
     def is_legal(self, request):
@@ -141,7 +141,7 @@ class WechatCallbackApi(object):
                     from_user_name,
                     to_user_name,
                     str(int(time())),
-                    u"欢迎关注微信猜数字游戏，请直接回复数字开始游戏！",
+                    u"欢迎关注微信猜数字游戏，直接回复数字开始游戏！",
                 ))
 
             # 处理取消关注请求
@@ -228,10 +228,6 @@ class WechatCallbackApi(object):
                         success_rate = success_rate,
                         average_times = average_times,
                     )
-
-                # 命令 - 排行
-                elif self.is_command(msg, command=u'排行') or self.is_command(msg, command='b'):
-                    content = u"即将上线 ..."
 
                 # 命令 - 帮助
                 elif self.is_command(msg, command=u'帮助') or self.is_command(msg, command='h'):
