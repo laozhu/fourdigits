@@ -78,7 +78,7 @@ class WechatCallbackApi(object):
     # 初始化数据库
     def init_db(self, from_user_name):
         password = digits.choice()
-        kv.set_multi(kvdb.KVDB_KEYS, [from_user_name, '', 0, 0, 0, 0.0, 0.0, password, '',], from_user_name)
+        kv.set_multi(kvdb.KVDB_KEYS, [from_user_name, 0, 0, 0, 0.0, 0.0, password, '',], from_user_name)
 
     # 清理数据库
     def clean_db(self, from_user_name):
@@ -141,7 +141,7 @@ class WechatCallbackApi(object):
                     from_user_name,
                     to_user_name,
                     str(int(time())),
-                    u"欢迎关注微信猜数字游戏！",
+                    u"欢迎关注微信猜数字游戏，请直接回复数字开始游戏！",
                 ))
 
             # 处理取消关注请求
